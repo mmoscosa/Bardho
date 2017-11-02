@@ -1,4 +1,11 @@
 module.exports = {
+  modules: [
+    ['@nuxtjs/google-analytics']
+  ],
+
+ 'google-analytics': {
+    id: 'UA-109159392-1'
+  },
   /*
   ** Headers of the page
   */
