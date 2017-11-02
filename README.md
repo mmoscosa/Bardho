@@ -1,22 +1,27 @@
-# my-project
+# Bardho
 
-> Nuxt.js project
+> Mezcal Bardho Landing Page
 
-## Build Setup
+---
 
-``` bash
-# install dependencies
-$ npm install # Or yarn install
+Versioning Nomenclature:
 
-# serve with hot reload at localhost:3000
-$ npm run dev
+0.0.0-nxx
 
-# build for production and launch server
-$ npm run build
-$ npm start
+## First Number
 
-# generate static project
-$ npm run generate
-```
+Main batch number; this number will increase once the batch for all three products has been depleted: ie if we have 100 bottles for tobala, 100 for special and 100 for Espadin, the main version will increase once all 300 bottles are finished. If there is a need to get more bottles of -lets say- Espadin, then the versioning will change for Espadin second number.
 
-For detailed explanation on how things work, checkout the [Nuxt.js docs](https://github.com/nuxt/nuxt.js).
+Related to the histories, this will be a "chapter" a topic will be set and all stories for subversions will be related to this topic.
+
+## Second Number
+
+It is a form to continue the story, the chapter while new batches continue to appear.
+
+## Third Number
+
+Used to denotate the mumber for special editions to our diferent clients or special events.
+
+# Letters
+
+This indicates if this is a batch that will be specific for a particular country,
