@@ -1,5 +1,22 @@
 <template lang="html">
-
+  <section>
+    <div class="ui form">
+  <div class="three fields">
+    <div class="required field">
+      <label v-lang.forms.labels.email></label>
+      <input type="text" placeholder="">
+  </div>
+    <div class="required field">
+      <label v-lang.forms.labels.name></label>
+      <input type="text" placeholder="">
+    </div>
+    <div class="field">
+      <label v-lang.forms.labels.referal></label>
+      <input type="text" placeholder="">
+    </div>
+  </div>
+</div>
+  </section>
 </template>
 
 <script>
