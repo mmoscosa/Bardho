@@ -2,7 +2,7 @@ export default {
   labels: {
     email: 'Correo Electrónico',
     name: 'Nombre Completo',
-    referal: '¿Quién te invitó? - Indica su email'
+    referal: '¿Codigo de invitación?'
   },
   buttons: {
     submit: 'Subscribirse'

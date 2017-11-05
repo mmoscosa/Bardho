@@ -21,7 +21,7 @@
         <label v-lang.contact.form.message></label>
         <textarea type="textarea" name="comment" v-model="cForm.message"></textarea>
       </div>
-      <p class="ui basic wide button" @click="contact()" v-lang.contact.form.button></p>
+      <div class="ui basic wide button" @click="contact()" v-lang.contact.form.button></div>
     </form>
   </div>
 </template>
