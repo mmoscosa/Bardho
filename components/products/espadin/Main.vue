@@ -3,7 +3,7 @@
     <div class="ui row">
       <h1 v-lang.products.variants.espadin.name></h1>
       <div>
-        <img class="ui medium left floated image" src="~/assets/espadin.png">
+        <img class="ui medium left floated rounded image" src="~/assets/espadin.png">
         <h2 v-lang.products.description>Descripcion</h2>
         <p v-lang.products.variants.espadin.description></p>
         <div class="ui divider"></div>
@@ -42,9 +42,11 @@
             </div>
           </div>
         </div>
-        <br><br>
+        <div class="photos">
+          <photos/>
+        </div>
         <div class="ui stacked segment">
-          <p v-lang.mailchimpInvite></p>
+          <p class="promo" v-lang.mailchimpInvite></p>
         </div>
         <MailList/>
       </div>
@@ -64,10 +66,12 @@
 <script>
 import Stories from '~/components/products/espadin/Stories'
 import MailList from '~/components/utils/MailList'
+import Photos from '~/components/products/espadin/Photos'
 export default {
   components: {
     Stories,
-    MailList
+    MailList,
+    Photos
   }
 }
 </script>
@@ -75,5 +79,14 @@ export default {
 <style lang="less">
 .ui.statistics {
     font-size: 80%;
+}
+.photos{
+  display: inline-block;
+}
+.promo{
+    font-size: 16pt;
+    strong{
+      font-size: 22pt;
+    }
 }
 </style>

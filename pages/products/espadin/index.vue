@@ -1,9 +1,9 @@
 <template>
   <div class="ui row">
-    <div class="ui eleven wide column">
+    <div class="ui twelve wide column">
       <EspadinMain/>
     </div>
-    <div class="ui five wide column" id="specs">
+    <div class="ui four wide column" id="specs">
       <EspadinSide/>
     </div>
   </div>
