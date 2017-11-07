@@ -1,9 +1,9 @@
 <template>
   <section class="ui row">
-    <div class="ten wide column">
+    <div class="eleven wide column">
       <ContactForm/>
     </div>
-    <div class="six wide column">
+    <div class="five wide column">
       <SideBar/>
     </div>
   </section>

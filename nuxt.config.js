@@ -28,6 +28,7 @@ module.exports = {
     {src: '~/plugins/multilanguage', ssr: false },
     {src: '~/plugins/instantsearch', ssr: false },
     {src: '~/plugins/Viewer', ssr: false },
+    {src: '~/plugins/socialSharing', ssr: false },
     {src: '~/plugins/vuefire'}
   ],
   /*

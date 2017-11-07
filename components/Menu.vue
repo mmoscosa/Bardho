@@ -8,12 +8,12 @@
       <nuxt-link to="/stories" class="ui item" :class="{'active' : section == 'stories' || section == 'stories-id'}" v-lang.index.menu.stories></nuxt-link>
       <div class="right menu">
         <nuxt-link to="/contact" class="ui item" :class="{'active' : section == 'contact'}" v-lang.index.menu.contact></nuxt-link>
-        <div class="ui item">
+        <!-- <div class="ui item">
           <i class="mx flag" @click="changeLanuage('es')"></i>
         </div>
         <div class="ui item" >
           <i class="gb flag" @click="changeLanuage('en')"></i>
-        </div>
+        </div> -->
       </div>
     </div>
   </nav>

@@ -9,6 +9,7 @@ export default {
   },
   sidebar: {
     title: 'Nuestras oficinas',
-    social: 'Siguenos en redes sociales'
+    social: 'Siguenos en redes sociales',
+    sharing: 'Comparte Bard<span class="h">h</span>o con tus amistades'
   }
 }

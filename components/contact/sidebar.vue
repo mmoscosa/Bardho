@@ -1,37 +1,43 @@
 <template>
   <div>
-    <h2 v-lang.contact.sidebar.title></h2>
-    <h3>Guadalajara</h3>
-    <div class="ui segment">
-      <!-- <p v-lang.index.soon></p> -->
-    </div>
-    <h3>Oaxaca</h3>
-    <div class="ui segment">
-      <!-- <p v-lang.index.soon></p> -->
-    </div>
-    <div class="ui divider"></div>
     <h2 v-lang.contact.sidebar.social></h2>
-    <div class="ui fluid buttons">
-      <a href="//www.facebook.com/mezcalbardho" class="ui facebook button">
-        <i class="facebook icon"></i>
-        Facebook
-      </a>
-      <div class="or" data-text="•"></div>
-      <a href="//www.twitter.com/mezcalbardho" class="ui twitter button">
-        <i class="twitter icon"></i>
-        Twitter
-      </a>
-      <div class="or" data-text="•"></div>
-      <a href="//www.instagram.com/mezcalbardho" class="ui instagram button">
-        <i class="instagram icon"></i>
-        Instagram
-      </a>
-    </div>
-  </div>
+    <a href="//www.facebook.com/mezcalbardho" class="ui facebook fluid button">
+      <i class="facebook icon"></i>
+      Facebook
+    </a>
+    <div class="ui divider"></div>
+    <a href="//www.twitter.com/mezcalbardho" class="ui twitter fluid button">
+      <i class="twitter icon"></i>
+      Twitter
+    </a>
+    <div class="ui divider"></div>
+    <a href="//www.instagram.com/mezcalbardho" class="ui instagram fluid button">
+      <i class="instagram icon"></i>
+      Instagram
+    </a>
+    <div class="ui divider"></div>
+    <h3 v-lang.contact.sidebar.sharing></h3>
+    <socialSharing :shareData="shareData"/>
+</div>
 </template>
 
 <script>
+import socialSharing from '~/components/utils/shareSocial'
 export default {
+  data () {
+    return {
+      shareData: {
+        link: 'https://bardho.com/',
+        title: 'Mezcal Bardho | Compartiendo historias',
+        description: 'Ya sea que estes cerrando un negocio, comenzando tu empresa, puede ser que te promovieron, no se hable de un desamor o un compromiso; muy al estilo mexicano el celebrar las victorias así como las derrotas, inequvicadamente el acompañante perfecto, aquel testigo es Mezcal Bardho. Para personas que siempre estan buscando dar mas, arreglarselas con creatividad, siempre manteniendo un estilo muy propio, personas que nunca se dan por vencido.',
+        quote: 'Mientras que el equipo de ensueño -hipster, hacker y hustler- representan los "roles" tradicionales dentro de un startup (donde el diseñador es el hipster, el hacker es el desarrollador y el hustler es la persona de desarrollo de negocios); en Bardho ofrecemos tres ediciones que sabemos cumpliran con cada uno de sus gustos.',
+        tags: 'mezcal,bardho,artesanal,mexico'
+      }
+    }
+  },
+  components: {
+    socialSharing
+  }
 }
 </script>
 

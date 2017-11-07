@@ -5,7 +5,7 @@
     <div class="ui stacked segment">
       <p v-lang.contact.blurb></p>
     </div>
-    <form class="ui form" name="contact" netlify-honeypot="bot-field"  netlify>
+    <form class="ui form" name="contact" :class="{loading: isLoading, hidden: isHidden}">
       <p class="hidden">
         <label>Don’t fill this out: <input name="bot-field" v-model="cForm.honey"></label>
       </p>
@@ -23,30 +23,52 @@
       </div>
       <div class="ui basic wide button" @click="contact()" v-lang.contact.form.button></div>
     </form>
+    <div class="ui row" :class="{hidden: !isHidden}">
+      <div class="ui divider"></div>
+      <h1>¡Gracias por ponerte en contacto con nosotros!</h1>
+      <p>Si no lo has hecho aun, te invitamos a que te registres a para recibir las ultimas noticias de Bard<span class="h">h</span>o</p>
+      <MailList/>
+    </div>
   </div>
 </template>
 
 <script>
 import axios from 'axios'
+import MailList from '~/components/utils/MailList'
 export default {
   data () {
     return {
-      cForm: []
+      cForm: [],
+      isLoading: false,
+      isHidden: false
     }
+  },
+  components: {
+    MailList
   },
   methods: {
     contact: function () {
+      this.isLoading = true
       var api = 'https://2oby6oykv0.execute-api.us-west-2.amazonaws.com/bardho/mailing/contact'
       if (!this.cForm.honey && this.cForm.name && this.cForm.email && this.cForm.message) {
         axios.post(api, {
-          'name': this.cForm.name,
-          'email': this.cForm.email,
-          'message': this.cForm.message
+          'from': {
+            'name': this.cForm.name,
+            'email': this.cForm.email
+          },
+          'to': {
+            'name': 'Mezcal Bardho',
+            'email': 'contacto@bardho.com'
+          },
+          'subject': 'Forma de Contacto',
+          'message': this.cForm.message,
+          'messageHtml': this.cForm.message
         }).then((response) => {
-          console.log(response)
+          this.isHidden = true
         })
       } else {
         alert('Check your fields')
+        this.isLoading = false
       }
     }
   }
