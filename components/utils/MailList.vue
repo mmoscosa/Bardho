@@ -71,7 +71,6 @@ export default {
             code: this.userCode
           }
         }).then((response) => {
-          console.log(response)
           this.isHidden = true
         })
       } else {
