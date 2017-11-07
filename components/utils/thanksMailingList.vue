@@ -29,15 +29,47 @@
         </div>
       </div>
     </div>
+    <div class="ui divider"></div>
+    <p>Te invitamos a que compartas en las diferentes redes sociales tu link personalisado para que más personas se registren con tu codigo, dandote asi mayor oportunidad de ganar; no esperes más, son solo un par de clicks.</p>
+    <socialSharing :shareData="shareData"/>
   </section>
 </template>
 
 <script>
+import socialSharing from '~/components/utils/shareSocial'
 export default {
+  data () {
+    return {
+      shareData: {
+        link: 'https://bardho.com/',
+        title: 'Mezcal Bardho | Compartiendo historias',
+        description: 'Mezcal Bardho | Compartiendo historias: Para personas que siempre estan buscando dar mas, arreglarselas con creatividad, siempre manteniendo un estilo muy propio, personas que nunca se dan por vencido.',
+        quote: 'Muy al estilo mexicano el celebrar las victorias así como las derrotas, inequvicadamente el acompañante perfecto, aquel testigo es Mezcal Bardho.',
+        tags: 'mezcal,bardho,artesanal,mexico'
+      }
+    }
+  },
+  components: {
+    socialSharing
+  },
   props: ['userCode'],
+  mounted () {
+    this.setShareUrl()
+  },
+  watch: {
+    '$route': function (newRoute, oldRoute) {
+      this.setShareUrl(newRoute, oldRoute)
+    }
+  },
+  route: {
+    canReuse: true
+  },
   methods: {
     linkToShare: function (code) {
       window.location = '//bardho.com/products/espadin?code=' + code
+    },
+    setShareUrl (newRoute, oldRoute) {
+      this.shareData.link = 'http://bardho.com' + this.$route.fullPath + '/?code=' + this.userCode
     }
   }
 }
