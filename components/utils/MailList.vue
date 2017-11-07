@@ -58,7 +58,7 @@ export default {
       var api = 'https://2oby6oykv0.execute-api.us-west-2.amazonaws.com/bardho/mailing/list'
       var referal = (this.mailingForm.referal ? this.mailingForm.referal : '')
       var message = 'Felicidades, te has registrado para recibir las ultimas noticias de Bardho \n Te recordamos invitar a tus amigos y amigas, conocidos y conocidas a que se registren usando el siguiente código: ' + this.userCode + ' \n Gracias por confiar en nosotros y cuentanos tus historias'
-      var messageHtml = 'Felicidades, te has registrado para recibir las ultimas noticias de Bardho \n Te recordamos invitar a tus amigos y amigas, conocidos y conocidas a que se registren usando el siguiente código: <strong>' + this.userCode + '</strong> <br><br> No olvides que puedes compartir el siguiente link con tu codigo prellenado <a href="//bardho.com/products/espadin?code=' + this.userCode + '">link 😬</a> <br><br> Gracias por confiar en nosotros y cuentanos tus historias <br>'
+      var messageHtml = 'Felicidades, te has registrado para recibir las ultimas noticias de Bardho \n Te recordamos invitar a tus amigos y conocidos a que se registren usando el siguiente código: <strong>' + this.userCode + '</strong> <br><br> No olvides que puedes compartir el siguiente link con tu codigo prellenado <a href="https://bardho.com/products/espadin?code=' + this.userCode + '">link 😬</a> <br><br> Gracias por confiar en nosotros y cuentanos tus historias <br>'
       if (!this.mailingForm.honey && this.mailingForm.name && this.mailingForm.email) {
         axios.post(api, {
           name: this.mailingForm.name,
