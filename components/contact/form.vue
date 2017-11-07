@@ -39,9 +39,17 @@ export default {
       var api = 'https://2oby6oykv0.execute-api.us-west-2.amazonaws.com/bardho/mailing/contact'
       if (!this.cForm.honey && this.cForm.name && this.cForm.email && this.cForm.message) {
         axios.post(api, {
-          'name': this.cForm.name,
-          'email': this.cForm.email,
-          'message': this.cForm.message
+          'from':{
+            'name': this.cForm.name,
+            'email': this.cForm.email
+          },
+          'to':{
+            'name': 'Mezcal Bardho',
+            'email': 'mezcal@bardho.com',
+          },
+          'subject': 'Forma de Contacto',
+          'message': this.cForm.message,
+          'messageHtml': this.cForm.message
         }).then((response) => {
           console.log(response)
         })

@@ -7,14 +7,10 @@
       <div class="ui piled segment">
         <p v-lang.index.blurb></p>
       </div>
-      <nuxt-link to="/products" class="ui basic branded animated fade button" tabindex="0">
-        <div class="visible content">
-          <span v-lang.index.callToAction></span>
-        </div>
-        <div class="hidden content">
-          <span v-lang.index.price></span>
-        </div>
-      </nuxt-link>
+
+      <div class="right floated five wide column">
+        <MailList/>
+      </div>
   </div>
   <div class="computer only sixteen wide column bottle">
     <BottleSVG/>
@@ -24,8 +20,10 @@
 
 <script>
 import BottleSVG from '~/components/Bottle.vue'
+import MailList from '~/components/utils/MailList'
 export default {
   components: {
+    MailList,
     BottleSVG
   }
 }
