@@ -4,7 +4,7 @@
       <nuxt-link to="/" class="item" :class="{'active' : section == 'index'}">
         Bard<span class="h">h</span>o <small>v0.1</small>
       </nuxt-link>
-      <nuxt-link to="/products" class="ui item" :class="{'active' : section == 'products' || section == 'products-espadin'}" v-lang.index.menu.products></nuxt-link>
+      <nuxt-link to="/products/espadin" class="ui item" :class="{'active' : section == 'products' || section == 'products-espadin'}" v-lang.index.menu.products></nuxt-link>
       <nuxt-link to="/stories" class="ui item" :class="{'active' : section == 'stories' || section == 'stories-id'}" v-lang.index.menu.stories></nuxt-link>
       <div class="right menu">
         <nuxt-link to="/contact" class="ui item" :class="{'active' : section == 'contact'}" v-lang.index.menu.contact></nuxt-link>

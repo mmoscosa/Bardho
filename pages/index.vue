@@ -1,6 +1,6 @@
 <template>
   <section class="ui row">
-    <div class="computer only right floated right aligned ten wide column" id="title">
+    <div class="right floated right aligned ten wide column" id="title">
       <span class="mezcal">Mezcal</span>
       <h1>Bard<span class="h">h</span>o <span v-lang.index.slogan id="slogan"></span></h1>
       <div class="ui divider"></div>
