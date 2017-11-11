@@ -26,7 +26,7 @@
     <div class="ui row" :class="{hidden: !isHidden}">
       <div class="ui divider"></div>
       <h1>¡Gracias por ponerte en contacto con nosotros!</h1>
-      <p>Si no lo has hecho aun, te invitamos a que te registres a para recibir las ultimas noticias de Bard<span class="h">h</span>o</p>
+      <br>
       <MailList/>
     </div>
   </div>

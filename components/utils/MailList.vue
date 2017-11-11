@@ -1,5 +1,7 @@
 <template lang="html">
-  <section>
+  <section id="maillist">
+    <h1>Registrate</h1>
+    <p>Si aun no te registras a nuestra lista, te invitamos a que te registres a para recibir las ultimas noticias de Bard<span class="h">h</span>o, asi como acceso exclusivo a preventas.</p>
     <div class="ui form" :class="{loading: isLoading, hidden: isHidden}">
       <p class="hidden">
         <label>Don’t fill this out: <input name="bot-field" v-model="mailingForm.honey"></label>
@@ -22,6 +24,13 @@
     </div>
     <div class="ui row" :class="{hidden: !isHidden}">
       <Thanks :userCode="userCode"/>
+    </div>
+    <div class="ui grid">
+      <div class="ui row">
+        <div class="right floated right aligned ten wide column">
+          <small>Lo detestamos tanto como tu, prometemos no SPAM 😇</small>
+        </div>
+      </div>
     </div>
   </section>
 </template>
@@ -83,12 +92,21 @@ export default {
 </script>
 
 <style lang="less">
-.hidden{
-  display: none;
-}
-#bardho{
-  box-shadow: 0 0 0 1px #f57450 inset !important;
-  color: #ffffff !important;
-  background: #f57450 !important;
+#maillist {
+  h1{
+    font-size: 22pt;
+    line-height: 20pt;
+    text-transform: none;
+    width: 100%;
+  }
+  .hidden{
+    display: none;
+  }
+
+  #bardho{
+    box-shadow: 0 0 0 1px #f57450 inset !important;
+    color: #ffffff !important;
+    background: #f57450 !important;
+  }
 }
 </style>
