@@ -10,6 +10,7 @@
     </div>
     <div class="ui four wide column">
       <h1>Bardho Social</h1>
+      <br>
       <SideBar/>
     </div>
   </div>

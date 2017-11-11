@@ -1,25 +1,19 @@
 <template>
   <div class="ui row">
-    <Loading v-if="feed == 'loading'"/>
-    <section class="ui sixteen wide column" v-for="story in feed">
-      <img v-if="story.images" @click="linkToInstagram(story.link)" class="instagram ui fluid rounded image " :src="story.images.standard_resolution.url">
+    <section class="ui sixteen wide column" v-for="photo in photos">
+      <section class="ui grid">
+        <img @click="linkToInstagram(photo.link)" class="instagram ui fluid rounded image " :src="photo.images[0].source">
 
-      <section v-if="story.images" class="ui grid">
         <div class="left floated twelve wide column">
-          <small class="ui centered" v-if="story.images">
-            <i class="quote left icon"></i> {{story.caption.text}}
-          </small>
-        </div>
-        <div class="right floated right aligned four wide column">
-          <small class="ui centered" v-if="story.images">
-            <i class="heart icon"></i> {{story.likes.data.length}}
+          <small class="ui centered">
+            <i class="quote left icon"></i> {{photo.name}}
           </small>
         </div>
       </section>
       <div class="ui divider"></div>
     </section>
     <section class="ui centered grid">
-      <a href="https://www.instagram.com/mezcalbardho/" class="ui tiny branded-accent button">Powered by <i class="instagram icon"></i></a>
+      <a href="http://mmoscosa.com/2hsxaLE" class="ui tiny branded-accent button">Powered by <i class="facebook icon"></i></a>
     </section>
   </div>
 </template>
@@ -30,20 +24,24 @@ import Loading from '~/components/utils/Loading.vue'
 export default {
   data () {
     return {
-      feed: 'loading'
+      photos: []
     }
   },
   components: {
     Loading
   },
   mounted () {
-    this.getFeed()
+    this.getPhotos()
   },
   methods: {
-    getFeed: function () {
-      var api = 'https://2oby6oykv0.execute-api.us-west-2.amazonaws.com/bardho/instagram'
-      axios.get(api).then((response) => {
-        this.feed = response.data.items
+    getPhotos: function () {
+      var api = 'https://2oby6oykv0.execute-api.us-west-2.amazonaws.com/bardho/fbgraph'
+      axios.post(api, {
+        query: '788456524677937?fields=photos{link,images,name}'
+      }).then((response) => {
+        if (response) {
+          this.photos = response.data.photos.data
+        }
       })
     },
     linkToInstagram: function (IGlink) {
@@ -59,6 +57,7 @@ export default {
 }
 .instagram{
   cursor: pointer !important;
+  height: 100% !important;
 }
 .button{
   margin-top: 10px;
