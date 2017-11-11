@@ -1,5 +1,5 @@
 <template lang="html">
-  <viewer class="ui five column grid" :images="photos">
+  <viewer class="ui four column grid" :images="photos">
     <div class="column" v-for="photo in photos">
       <img :src="photo.images[0].source" :key="photo.name" class="ui bordered rounded image">
     </div>
@@ -21,7 +21,7 @@ export default {
     getPhotos: function () {
       var api = 'https://2oby6oykv0.execute-api.us-west-2.amazonaws.com/bardho/fbgraph'
       axios.post(api, {
-        query: '785825174941072?fields=photos.limit(5){link,images,name}'
+        query: '785825174941072?fields=photos.limit(4){link,images,name}'
       }).then((response) => {
         if (response) {
           console.log(response)
