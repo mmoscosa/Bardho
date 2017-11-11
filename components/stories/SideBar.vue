@@ -4,7 +4,7 @@
       <section class="ui grid">
         <img @click="linkToInstagram(photo.link)" class="instagram ui fluid rounded image " :src="photo.images[0].source">
 
-        <div class="left floated sixteen wide column">
+        <div class="left floated twelve wide column">
           <small class="ui centered">
             <i class="quote left icon"></i> {{photo.name}}
           </small>
