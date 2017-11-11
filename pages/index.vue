@@ -7,9 +7,13 @@
       <div class="ui piled segment">
         <p v-lang.index.blurb></p>
       </div>
-
-      <div class="right floated five wide column">
-        <MailList/>
+      <div class="ui grid">
+        <div class="tablet mobile only sixteen wide column">
+          <BottleSVG/>
+        </div>
+        <div class="right floated thirteen wide column">
+          <MailList/>
+        </div>
       </div>
   </div>
   <div class="computer only sixteen wide column bottle">
@@ -34,12 +38,12 @@ export default {
 span{&.h{color: @brandColor;}}
 span{
   &.mezcal{
-    font-size: 125pt;
+    font-size: 13vw;
     line-height: 50pt;
     text-transform: uppercase;
     font-weight: bolder;
     position: absolute;
-    margin-left: -550px;
+    margin-left: -43vw;
     z-index: -1;
     color: #dddddd;
   }
@@ -60,15 +64,16 @@ span{
   margin-bottom: -50px;
   margin-top: 50px;
   h1{
-    font-size: 75pt;
-    line-height: 50pt;
+    font-size: 8vw;
+    line-height: 7vw;
     text-transform: uppercase;
     width: 100%;
     span{
       &#slogan{
         color: black;
         display: block;
-        font-size: 25pt;
+        font-size: 2vw;
+        margin-top: -2vw;
         padding-right: 10px;
       }
     }
