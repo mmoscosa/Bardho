@@ -6,53 +6,10 @@
         <img class="ui medium left floated rounded image" src="~/assets/espadin.png">
         <h2 v-lang.products.description>Descripcion</h2>
         <p v-lang.products.variants.espadin.description></p>
-        <div class="ui grid">
-          <div class="ui row">
-            <div class="tablet mobile only sixteen wide column">
-              <photos/>
-            </div>
-          </div>
-        </div>
         <div class="ui divider"></div>
-        <h2 v-lang.products.rapidDetails></h2>
-        <div class="ui four statistics">
-          <div class="statistic">
-            <div class="value">
-              <i class="money icon"></i>
-            </div>
-            <div class="label">
-              <span v-lang.products.variants.espadin.price></span>
-            </div>
-          </div>
-          <div class="statistic">
-            <div class="value">
-              <i class="thermometer three quarters icon"></i>
-            </div>
-            <div class="label">
-              <span v-lang.products.variants.espadin.alcohol></span>
-            </div>
-          </div>
-          <div class="statistic">
-            <div class="value">
-              <i class="bullseye icon"></i>
-            </div>
-            <div class="label">
-              <span v-lang.products.variants.espadin.volume></span>
-            </div>
-          </div>
-          <div class="statistic">
-            <div class="value">
-              <i class="fork icon"></i>
-            </div>
-            <div class="label">
-              <span v-lang.products.variants.espadin.version></span>
-            </div>
-          </div>
-        </div>
-        <br><br><br>
-        <div class="ui grid">
+        <div class="ui grid" id="photos">
           <div class="ui row">
-            <div class="computer only sixteen wide column photos">
+            <div class="sixteen wide column photos">
               <photos/>
             </div>
           </div>
@@ -60,6 +17,7 @@
         <div class="ui stacked segment">
           <p class="promo" v-lang.mailchimpInvite></p>
         </div>
+        <div class="ui divider"></div>
         <MailList/>
       </div>
     </div>
@@ -91,6 +49,9 @@ export default {
 <style lang="less">
 .ui.statistics {
     font-size: 80%;
+}
+#photos {
+  margin: 20px auto 50px auto;
 }
 .photos{
   display: inline-block;
