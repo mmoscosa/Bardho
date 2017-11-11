@@ -6,6 +6,13 @@
         <img class="ui medium left floated rounded image" src="~/assets/espadin.png">
         <h2 v-lang.products.description>Descripcion</h2>
         <p v-lang.products.variants.espadin.description></p>
+        <div class="ui grid">
+          <div class="ui row">
+            <div class="tablet mobile only sixteen wide column">
+              <photos/>
+            </div>
+          </div>
+        </div>
         <div class="ui divider"></div>
         <h2 v-lang.products.rapidDetails></h2>
         <div class="ui four statistics">
@@ -42,8 +49,13 @@
             </div>
           </div>
         </div>
-        <div class="photos">
-          <photos/>
+        <br><br><br>
+        <div class="ui grid">
+          <div class="ui row">
+            <div class="computer only sixteen wide column photos">
+              <photos/>
+            </div>
+          </div>
         </div>
         <div class="ui stacked segment">
           <p class="promo" v-lang.mailchimpInvite></p>
