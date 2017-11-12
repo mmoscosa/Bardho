@@ -14,7 +14,7 @@
         <div class="computer only right floated thirteen wide column">
           <MailList/>
         </div>
-        <div class="tablet mobile only thirteen wide column">
+        <div class="tablet mobile only sixteen wide column">
           <MailList/>
         </div>
       </div>
