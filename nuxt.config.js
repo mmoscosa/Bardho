@@ -15,7 +15,8 @@ module.exports = {
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: 'Mezcal Bardho | Compartiendo historias' },
-      { property: 'og:image', content: "/favicon.png"}
+      { property: 'og:title', content: "Mezcal Bardho"}
+      { property: 'og:image', content: "/preview.jpg"}
     ],
     link: [
       { rel: 'author', href: '/humans.txt' },
