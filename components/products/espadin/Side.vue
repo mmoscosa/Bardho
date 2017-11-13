@@ -10,7 +10,9 @@
         </div>
         <div class="ui divider"></div>
       </div>
+      <quickDetails/>
       <div class="sixteen wide column">
+        <div class="ui divider"></div>
         <h2 v-lang.products.reviews></h2>
         <div>
           <img class="ui tiny left floated circular image" src="~/assets/paa.jpg">
@@ -26,10 +28,12 @@
 </template>
 
 <script>
+import quickDetails from '~/components/products/espadin/QuickDetails'
 import disqus from '~/components/utils/Disqus'
 export default {
   components: {
-    disqus
+    disqus,
+    quickDetails
   }
 }
 </script>
