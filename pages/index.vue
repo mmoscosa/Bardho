@@ -83,8 +83,9 @@ span{
   }
 }
 #base{
-  position: absolute;
-  bottom: 60px;
+  position: fixed;
+  height: 98%;
+  bottom: 100px;
   z-index: -1;
 }
 </style>

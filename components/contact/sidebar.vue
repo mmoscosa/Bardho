@@ -29,8 +29,8 @@ export default {
       shareData: {
         link: 'https://bardho.com/',
         title: 'Mezcal Bardho | Compartiendo historias',
-        description: 'Ya sea que estes cerrando un negocio, comenzando tu empresa, puede ser que te promovieron, no se hable de un desamor o un compromiso; muy al estilo mexicano el celebrar las victorias así como las derrotas, inequvicadamente el acompañante perfecto, aquel testigo es Mezcal Bardho. Para personas que siempre estan buscando dar mas, arreglarselas con creatividad, siempre manteniendo un estilo muy propio, personas que nunca se dan por vencido.',
-        quote: 'Mientras que el equipo de ensueño -hipster, hacker y hustler- representan los "roles" tradicionales dentro de un startup (donde el diseñador es el hipster, el hacker es el desarrollador y el hustler es la persona de desarrollo de negocios); en Bardho ofrecemos tres ediciones que sabemos cumpliran con cada uno de sus gustos.',
+        description: 'Mezcal Bardho | Compartiendo historias: Para personas que siempre estan buscando dar mas, arreglarselas con creatividad, siempre manteniendo un estilo muy propio, personas que nunca se dan por vencido.',
+        quote: 'Muy al estilo mexicano el celebrar las victorias así como las derrotas, inequvicadamente el acompañante perfecto, aquel testigo es Mezcal Bardho.',
         tags: 'mezcal,bardho,artesanal,mexico'
       }
     }
