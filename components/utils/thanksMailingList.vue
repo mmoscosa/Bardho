@@ -42,9 +42,9 @@ export default {
     return {
       shareData: {
         link: 'https://bardho.com/products/espadin/' + this.userCode,
-        title: 'Estoy participando por una botella de Mezcal Bardho, utiliza el código: ' + this.userCode 'Para participar.',
+        title: 'Estoy participando por una botella de Mezcal Bardho, utiliza el código: ' + this.userCode + 'Para participar.',
         description: 'Te invito a participar en una de las primeras 10 botellas de Mezcal Bardho!',
-        quote: 'Estoy participando por una botella de Mezcal Bardho, utiliza el código: ' + this.userCode 'Para participar.',
+        quote: 'Estoy participando por una botella de Mezcal Bardho, utiliza el código: ' + this.userCode + 'Para participar.',
         tags: 'mezcal,bardho,artesanal,mexico'
       }
     }
