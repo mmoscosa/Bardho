@@ -93,6 +93,7 @@ export default {
 
 <style lang="less">
 #maillist {
+  background-color: white;
   h1{
     font-size: 22pt;
     line-height: 20pt;

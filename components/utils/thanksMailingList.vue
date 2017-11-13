@@ -41,10 +41,10 @@ export default {
   data () {
     return {
       shareData: {
-        link: 'https://bardho.com/',
-        title: 'Mezcal Bardho | Compartiendo historias',
-        description: 'Mezcal Bardho | Compartiendo historias: Para personas que siempre estan buscando dar mas, arreglarselas con creatividad, siempre manteniendo un estilo muy propio, personas que nunca se dan por vencido.',
-        quote: 'Muy al estilo mexicano el celebrar las victorias así como las derrotas, inequvicadamente el acompañante perfecto, aquel testigo es Mezcal Bardho.',
+        link: 'https://bardho.com/products/espadin/' + this.userCode,
+        title: 'Estoy participando por una botella de Mezcal Bardho, utiliza el código: ' + this.userCode 'Para participar.',
+        description: 'Te invito a participar en una de las primeras 10 botellas de Mezcal Bardho!',
+        quote: 'Estoy participando por una botella de Mezcal Bardho, utiliza el código: ' + this.userCode 'Para participar.',
         tags: 'mezcal,bardho,artesanal,mexico'
       }
     }

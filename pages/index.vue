@@ -84,7 +84,7 @@ span{
 }
 #base{
   position: fixed;
-  height: 98%;
+  height: 48vw;
   bottom: 100px;
   z-index: -1;
 }
