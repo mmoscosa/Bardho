@@ -19,7 +19,7 @@
         </div>
       </div>
   </div>
-  <div class="computer only sixteen wide column bottle">
+  <div class="computer only sixteen wide column bottle" id="base">
     <BottleSVG/>
   </div>
 </section>
@@ -81,5 +81,10 @@ span{
       }
     }
   }
+}
+#base{
+  position: absolute;
+  bottom: 60px;
+  z-index: -1;
 }
 </style>

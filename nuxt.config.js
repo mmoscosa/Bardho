@@ -19,7 +19,7 @@ module.exports = {
     ],
     link: [
       { rel: 'author', href: '/humans.txt' },
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.png' },
       { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.css' }
     ],
     script: []
