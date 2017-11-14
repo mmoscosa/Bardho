@@ -22,7 +22,7 @@ const config = {
   storageBucket: 'mezcal-bardho.appspot.com',
   messagingSenderId: '119896880348'
 }
-var firebaseApp = firebase.initializeApp(config)
+var firebaseApp = !firebase.apps.length ? firebase.initializeApp(config) : firebase.app()
 var db = firebaseApp.database()
 export default {
   data () {
