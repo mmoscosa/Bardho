@@ -24,7 +24,6 @@ export default {
         query: '785825174941072?fields=photos.limit(4){link,images,name}'
       }).then((response) => {
         if (response) {
-          console.log(response)
           this.photos = response.data.photos.data
         }
       })
