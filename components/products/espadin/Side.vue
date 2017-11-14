@@ -5,8 +5,8 @@
         <h2 v-lang.products.master></h2>
         <div>
           <img class="ui small centered circular image" src="~/assets/master.gif">
-          <h3>{{info.master.name}}</h3>
-          <p>{{info.master.bio}}</p>
+          <h3 v-if="info.master">{{info.master.name}}</h3>
+          <p v-if="info.master">{{info.master.bio}}</p>
         </div>
         <div class="ui divider"></div>
       </div>
