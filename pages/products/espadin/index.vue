@@ -1,10 +1,10 @@
 <template>
   <div class="ui row">
     <div class="ui twelve wide column">
-      <EspadinMain :info="products.espadin.es"/>
+      <EspadinMain :info="fbEspadin"/>
     </div>
     <div class="ui four wide column" id="specs">
-      <EspadinSide :info="products.espadin.es"/>
+      <EspadinSide :info="fbEspadin"/>
     </div>
   </div>
 </template>
@@ -27,7 +27,7 @@ var db = firebaseApp.database()
 export default {
   data () {
     return {
-      espadin: ''
+      fbEspadin: ''
     }
   },
   components: {
@@ -41,7 +41,7 @@ export default {
       asObject: true,
       // this is called once the data has been retrieved from firebase
       readyCallback: function () {
-        // this.espadin = source
+        this.fbEspadin = (this.products.espadin.es) ? this.products.espadin.es : {}
       }
     }
   }
