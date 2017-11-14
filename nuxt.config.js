@@ -30,7 +30,7 @@ module.exports = {
     {src: '~/plugins/instantsearch', ssr: false },
     {src: '~/plugins/Viewer', ssr: false },
     {src: '~/plugins/socialSharing', ssr: false },
-    {src: '~/plugins/vuefire'}
+    {src: '~/plugins/firebase'}
   ],
   /*
   ** Customize the progress bar color

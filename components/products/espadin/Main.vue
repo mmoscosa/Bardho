@@ -1,11 +1,11 @@
 <template lang="html">
   <section>
     <div class="ui row">
-      <h1 v-lang.products.variants.espadin.name></h1>
+      <h1>{{info.name}}</h1>
       <div>
         <img class="ui medium left floated rounded image" src="~/assets/espadin.png">
-        <h2 v-lang.products.description>Descripcion</h2>
-        <p v-lang.products.variants.espadin.description></p>
+        <h2>Descripción</h2>
+        <p>{{info.description}}</p>
         <div class="ui divider"></div>
         <div class="ui grid" id="photos">
           <div class="ui row">
@@ -42,7 +42,8 @@ export default {
     Stories,
     MailList,
     Photos
-  }
+  },
+  props: ['info']
 }
 </script>
 

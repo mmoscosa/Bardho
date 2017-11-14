@@ -9,7 +9,7 @@
             <i class="money icon"></i>
           </div>
           <div class="label">
-            <span v-lang.products.variants.espadin.price></span>
+            <span>{{info.price}}</span>
           </div>
         </div>
       </div>
@@ -19,7 +19,7 @@
             <i class="thermometer three quarters icon"></i>
           </div>
           <div class="label">
-            <span v-lang.products.variants.espadin.alcohol></span>
+            <span>{{info.alcohol}}</span>
           </div>
         </div>
       </div>
@@ -29,7 +29,7 @@
             <i class="bullseye icon"></i>
           </div>
           <div class="label">
-            <span v-lang.products.variants.espadin.volume></span>
+            <span>{{info.volume}}</span>
           </div>
         </div>
       </div>
@@ -47,3 +47,9 @@
   </div>
 </section>
 </template>
+
+<script>
+  export default {
+    props: ['info']
+  }
+</script>
