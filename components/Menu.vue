@@ -13,6 +13,9 @@
         <div class="ui item" >
           <i class="gb flag" @click="changeLanuage('en')"></i>
         </div>
+        <div class="ui item" >
+          <i class="fr flag" @click="changeLanuage('fr')"></i>
+        </div>
       </div>
     </div>
   </nav>
