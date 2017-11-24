@@ -36,7 +36,9 @@ export default {
   },
   'stories': {
     'title': 'Relatos',
-    'sideTitle': 'Barho Social'
+    'sideTitle': 'Barho Social',
+    'readMore': 'Leer Más',
+    'readingTime': 'minutos de lectura'
   },
   'contact': {
     'title': 'Contacto',
