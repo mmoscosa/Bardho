@@ -11,11 +11,7 @@
         <div class="tablet mobile only sixteen wide column">
           <BottleSVG/>
         </div>
-        <div class="computer only right floated thirteen wide column">
-          <MailList/>
-        </div>
-        <div class="tablet mobile only sixteen wide column">
-          <MailList/>
+        <MailList/>
         </div>
       </div>
   </div>

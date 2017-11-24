@@ -9,7 +9,7 @@
       </section>
     </div>
     <div class="ui four wide column">
-      <h1>Bardho Social</h1>
+      <h1 v-lang.stories.sideTitle></h1>
       <br>
       <SideBar/>
     </div>

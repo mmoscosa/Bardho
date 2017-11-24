@@ -1,12 +1,8 @@
-import es from './es/index'
-import en from './en/index'
-import fr from './fr/index'
-import cn from './cn/index'
+import es from './es'
+import en from './en'
 
 export default {
-  default: 'es',
+  default: 'en',
   es: es,
-  fr: fr,
-  cn: cn,
   en: en
 }
