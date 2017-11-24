@@ -1,11 +1,11 @@
 <template lang="html">
   <section>
     <div class="ui row">
-      <h1>{{info.name}}</h1>
+      <h1 v-lang.products.espadin.name></h1>
       <div>
         <img class="ui medium left floated rounded image" src="~/assets/espadin.png">
-        <h2>Descripción</h2>
-        <p>{{info.description}}</p>
+        <h2  v-lang.products.espadin.description.title></h2>
+        <p  v-lang.products.espadin.description.longDescription></p>
         <div class="ui divider"></div>
         <div class="ui grid" id="photos">
           <div class="ui row">
@@ -15,7 +15,7 @@
           </div>
         </div>
         <div class="ui stacked segment">
-          <p class="promo" v-lang.mailchimpInvite></p>
+          <p class="promo"  v-lang.products.espadin.promo></p>
         </div>
         <div class="ui divider"></div>
         <MailList/>
@@ -42,8 +42,7 @@ export default {
     Stories,
     MailList,
     Photos
-  },
-  props: ['info']
+  }
 }
 </script>
 

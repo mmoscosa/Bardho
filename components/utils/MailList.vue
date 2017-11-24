@@ -1,26 +1,26 @@
 <template lang="html">
   <section id="maillist">
-    <h1>Registrate</h1>
-    <p>Si aun no te registras a nuestra lista, te invitamos a que te registres a para recibir las ultimas noticias de Bard<span class="h">h</span>o, asi como acceso exclusivo a preventas.</p>
+    <h1 v-lang.utils.mailList.title></h1>
+    <p v-lang.utils.mailList.blurb></p>
     <div class="ui form" :class="{loading: isLoading, hidden: isHidden}">
       <p class="hidden">
-        <label>Don’t fill this out: <input name="bot-field" v-model="mailingForm.honey"></label>
+        <label>fill this out: <input name="bot-field" v-model="mailingForm.honey"></label>
       </p>
       <div class="three fields">
         <div class="required field">
-          <label v-lang.forms.labels.email></label>
+          <label v-lang.utils.mailList.form.email></label>
           <input type="email" name="email" placeholder="" v-model="mailingForm.email">
         </div>
         <div class="required field">
-          <label v-lang.forms.labels.name></label>
+          <label v-lang.utils.mailList.form.name></label>
           <input type="text" name="name" placeholder="" v-model="mailingForm.name">
         </div>
         <div class="field">
-          <label v-lang.forms.labels.referal></label>
+          <label v-lang.utils.mailList.form.referal></label>
           <input type="text" name="referal" placeholder="" v-model="mailingForm.referal">
         </div>
       </div>
-      <div class="ui basic fluid button" @click="contact()" id="bardho" v-lang.contact.form.button></div>
+      <div class="ui basic fluid button" @click="contact()" id="bardho" v-lang.utils.mailList.form.button></div>
     </div>
     <div class="ui row" :class="{hidden: !isHidden}">
       <Thanks :userCode="userCode"/>
@@ -28,7 +28,7 @@
     <div class="ui grid">
       <div class="ui row">
         <div class="right floated right aligned ten wide column">
-          <small>Lo detestamos tanto como tu, prometemos no SPAM 😇</small>
+          <small v-lang.utils.mailList.spam></small>
         </div>
       </div>
     </div>

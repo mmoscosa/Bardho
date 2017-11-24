@@ -1,19 +1,18 @@
 <template>
   <nav class="computer only column" id="navbar">
     <div class="ui secondary pointing menu">
-      <nuxt-link to="/" class="item" :class="{'active' : section == 'index'}">
-        Bard<span class="h">h</span>o <small>v0.1</small>
+      <nuxt-link to="/" class="item" :class="{'active' : section == 'index'}" v-lang.utils.menu.home>
       </nuxt-link>
-      <nuxt-link to="/products/espadin" class="ui item" :class="{'active' : section == 'products' || section == 'products-espadin'}" v-lang.index.menu.products></nuxt-link>
-      <nuxt-link to="/stories" class="ui item" :class="{'active' : section == 'stories' || section == 'stories-id'}" v-lang.index.menu.stories></nuxt-link>
+      <nuxt-link to="/products/espadin" class="ui item" :class="{'active' : section == 'products' || section == 'products-espadin'}" v-lang.utils.menu.products></nuxt-link>
+      <nuxt-link to="/stories" class="ui item" :class="{'active' : section == 'stories' || section == 'stories-id'}" v-lang.utils.menu.stories></nuxt-link>
       <div class="right menu">
-        <nuxt-link to="/contact" class="ui item" :class="{'active' : section == 'contact'}" v-lang.index.menu.contact></nuxt-link>
-        <!-- <div class="ui item">
+        <nuxt-link to="/contact" class="ui item" :class="{'active' : section == 'contact'}" v-lang.utils.menu.contact></nuxt-link>
+        <div class="ui item">
           <i class="mx flag" @click="changeLanuage('es')"></i>
         </div>
         <div class="ui item" >
           <i class="gb flag" @click="changeLanuage('en')"></i>
-        </div> -->
+        </div>
       </div>
     </div>
   </nav>
@@ -28,22 +27,23 @@ export default {
     }
   },
   mounted () {
-    this.setUSserType()
+    this.defineActive()
   },
   watch: {
     '$route': function (newRoute, oldRoute) {
-      this.setUSserType(newRoute, oldRoute)
+      this.defineActive(newRoute, oldRoute)
     }
   },
   route: {
     canReuse: true
   },
   methods: {
-    setUSserType (newRoute, oldRoute) {
+    defineActive (newRoute, oldRoute) {
       this.section = this.$route.name
     },
     changeLanuage: function (lang) {
-      this.prototype.$language = lang
+      this.language = lang
+      console.log(this.language)
     }
   }
 }

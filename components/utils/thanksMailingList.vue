@@ -1,36 +1,36 @@
 <template lang="html">
   <section>
-    <h2>¡Felicidades!</h2>
-    <p>Ya estas registrado en nuestra base, estas muy cerca de ganar tu primera botella de Bardho</p>
+    <h2 v-lang.utils.thanksMailingList.title></h2>
+    <p v-lang.utils.thanksMailingList.blurb></p>
     <div class="ui tablet fluid stackable steps">
       <div class="completed step">
         <i class="id card outline icon"></i>
         <div class="content">
-          <div class="title">Registrarse</div>
-          <div class="description">Registrarse en la lista para participar</div>
+          <div class="title" v-lang.utils.thanksMailingList.steps.one.title></div>
+          <div class="description" v-lang.utils.thanksMailingList.steps.one.description></div>
         </div>
       </div>
       <div class="active step">
         <i class="share alternate icon"></i>
         <div class="content">
-          <div class="title link" @click="linkToShare(userCode)">Compartir</div>
+          <div class="title link" @click="linkToShare(userCode)" v-lang.utils.thanksMailingList.steps.two.title></div>
           <div class="description">
-            Invita a tus <a class="link" @click="linkToShare(userCode)">amistades</a>
+            <a class="link" @click="linkToShare(userCode)" v-lang.utils.thanksMailingList.steps.two.description></a>
             <br>
-            Tu codigo: {{userCode}}
+            <span v-lang.utils.thanksMailingList.steps.two.code></span> {{userCode}}
           </div>
         </div>
       </div>
       <div class="disabled step">
         <i class="trophy icon"></i>
         <div class="content">
-          <div class="title">¡Gana!</div>
-          <div class="description">Disfruta la historia de Bardho</div>
+          <div class="title" v-lang.utils.thanksMailingList.steps.three.title></div>
+          <div class="description" v-lang.utils.thanksMailingList.steps.three.description></div>
         </div>
       </div>
     </div>
     <div class="ui divider"></div>
-    <p>Te invitamos a que compartas en las diferentes redes sociales tu link personalisado para que más personas se registren con tu codigo, dandote asi mayor oportunidad de ganar; no esperes más, son solo un par de clicks.</p>
+    <p></p>
     <socialSharing :shareData="shareData"/>
   </section>
 </template>

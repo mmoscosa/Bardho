@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h2 v-lang.contact.sidebar.social></h2>
+    <h2 v-lang.contact.sidebar.title></h2>
     <a href="//www.facebook.com/mezcalbardho" class="ui facebook fluid button">
       <i class="facebook icon"></i>
       Facebook
