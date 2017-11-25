@@ -50,14 +50,13 @@ export default {
       // var en = ['en', 'en-US', 'en-EG', 'en-AU', 'en-GB', 'en-CA', 'en-NZ', 'en-IE', 'en-ZA', 'en-JM']
       var fr = ['fr', 'fr-BE', 'fr-CA', 'fr-CH', 'fr-LU']
       var es = ['es', 'es-AR', 'es-GT', 'es-CR', 'es-PA', 'es-DO', 'es-MX', 'es-VE', 'es-CO', 'es-PE', 'es-EC', 'es-CL', 'es-UY', 'es-PY', 'es-BO', 'es-SV', 'es-HN', 'es-NI', 'es-PR']
-      if (this.language === 'none') {
-        if (locale in fr) {
-          this.language = 'fr'
-        } else if (locale in es) {
-          this.language = 'es'
-        } else {
-          this.language = 'en'
-        }
+
+      if (locale in fr) {
+        this.language = 'fr'
+      } else if (locale in es) {
+        this.language = 'es'
+      } else {
+        this.language = 'en'
       }
     },
     changeLanuage: function (lang) {
