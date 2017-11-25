@@ -64,7 +64,7 @@ export default {
     },
     'mailList': {
       'title': 'Stay up to date',
-      'blurb': 'Join our mailing list and find out about our latest promos and releases; as well as new stories thar Bard<span class = "h">h</span>o has for you.',
+      'blurb': 'Join our mailing list and find out about our latest promos and releases; as well as new stories that Bard<span class = "h">h</span>o has for you.',
       'spam': 'We hate SPAM as much as you do; we promise to behave 😇',
       'form': {
         'email': 'Email',
