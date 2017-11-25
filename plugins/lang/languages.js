@@ -3,7 +3,7 @@ import en from './en'
 import fr from './fr'
 
 export default {
-  default: 'none',
+  default: 'es',
   es: es,
   en: en,
   fr: fr
