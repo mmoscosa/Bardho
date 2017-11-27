@@ -60,7 +60,11 @@ export default {
       'home': 'Bard<span class="h">h</span>o',
       'stories': 'Relatos',
       'products': 'Productos',
-      'contact': 'Contacto'
+      'contact': 'Contacto',
+      'dropdown': {
+        'header': 'Cambiar Idioma',
+        'select': 'Favor de elegir'
+      }
     },
     'mailList': {
       'title': 'Registrate',

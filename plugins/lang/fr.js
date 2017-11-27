@@ -15,7 +15,7 @@ export default {
       'description': {
         'title': 'La description',
         'shortDescription': 'Avec sa saveur et son arôme fumé, caractéristique de sa cuisson, sa cristallinité transmet la pureté et l\'honnêteté avec lesquelles il a été élaboré, laissant dans le palais le goût authentique du mezcal Oaxaca.',
-        'longDescription': 'Avec sa saveur et son arôme fumé, caractéristique de sa cuisson, sa cristallinité transmet la pureté et l\'honnêteté avec lesquelles elle a été élaborée, laissant en bouche la saveur authentique du mezcal d\'Oaxacan'
+        'longDescription': 'Avec sa saveur et son arôme fumé, caractéristique de sa cuisson, sa cristallinité transmet la pureté et l\'honnêteté avec lesquelles elle a été élaborée, laissant en bouche la saveur authentique du mezcal d\'Oaxaca'
       },
       'master': {
         'title': 'Mélange Maestro Mezcalero',
@@ -60,11 +60,15 @@ export default {
       'home': 'Bard<span class="h">h</span>o',
       'stories': 'Histoires',
       'products': 'Produits',
-      'contact': 'Contact'
+      'contact': 'Contact',
+      'dropdown': {
+        'header': 'Changer la langue',
+        'select': 'Veuillez choisir'
+      }
     },
     'mailList': {
       'title': 'Restez à jour',
-      'blurb': 'Rejoignez notre liste de diffusion et découvrez nos dernières promotions et versions; ainsi que de nouvelles histoires que Bard a pour vous.',
+      'blurb': 'Rejoignez notre liste de diffusion et découvrez nos dernières promotions et versions; ainsi que de nouvelles histoires que Bard<span class="h">h</span>o a pour vous.',
       'spam': 'Nous détestons le SPAM autant que vous; nous promettons de nous comporter 😇 ',
       'form': {
         'email': 'Email',
@@ -75,7 +79,7 @@ export default {
     },
     'thanksMailingList': {
       'title': 'Félicitations!',
-      'blurb': 'Vous vous êtes enregistré avec succès dans notre base de données de membres éminents. Vous êtes très près de profiter d\'une bouteille de Bard <span class="h">h</span>o',
+      'blurb': 'Vous vous êtes enregistré avec succès dans notre base de données de membres éminents. Vous êtes très près de profiter d\'une bouteille de Bard<span class="h">h</span>o <span class="h">h</span>o',
       'steps': {
         'one': {
           'title': 'Rejoindre',
