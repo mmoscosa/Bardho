@@ -1,0 +1,66 @@
+/* Semantic UI has these classes, however they're only applicable to*/
+/* grids, containers, rows and columns.*/
+/* plus, there isn't any `mobile hidden`, `X hidden` class.*/
+/* this snippet is using the same class names and same approach*/
+/* plus a bit more but to all elements.*/
+/* see https://github.com/Semantic-Org/Semantic-UI/issues/1114*/
+
+/* Mobile */
+@media only screen and (max-width: 767px) {
+  [class*="custom mobile hidden"],
+  [class*="custom tablet only"]:not(.mobile),
+  [class*="custom computer only"]:not(.mobile),
+  [class*="custom large screen only"]:not(.mobile),
+  [class*="custom widescreen only"]:not(.mobile),
+  [class*="or lower hidden"] {
+    display: none !important;
+  }
+}
+
+/* Tablet / iPad Portrait */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  [class*="custom mobile only"]:not(.tablet),
+  [class*="custom tablet hidden"],
+  [class*="custom computer only"]:not(.tablet),
+  [class*="custom large screen only"]:not(.tablet),
+  [class*="custom widescreen only"]:not(.tablet),
+  [class*="custom or lower hidden"]:not(.mobile) {
+    display: none !important;
+  }
+}
+
+/* Computer / Desktop / iPad Landscape */
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  [class*="custom mobile only"]:not(.computer),
+  [class*="custom tablet only"]:not(.computer),
+  [class*="custom computer hidden"],
+  [class*="custom large screen only"]:not(.computer),
+  [class*="custom widescreen only"]:not(.computer),
+  [class*="custom or lower hidden"]:not(.tablet):not(.mobile) {
+    display: none !important;
+  }
+}
+
+/* Large Monitor */
+@media only screen and (min-width: 1200px) and (max-width: 1919px) {
+  [class*="custom mobile only"]:not([class*="custom large screen"]),
+  [class*="custom tablet only"]:not([class*="custom large screen"]),
+  [class*="custom computer only"]:not([class*="custom large screen"]),
+  [class*="custom large screen hidden"],
+  [class*="custom widescreen only"]:not([class*="custom large screen"]),
+  [class*="custom or lower hidden"]:not(.computer):not(.tablet):not(.mobile) {
+    display: none !important;
+  }
+}
+
+/* Widescreen Monitor */
+@media only screen and (min-width: 1920px) {
+  [class*="custom mobile only"]:not([class*="custom widescreen"]),
+  [class*="custom tablet only"]:not([class*="custom widescreen"]),
+  [class*="custom computer only"]:not([class*="custom widescreen"]),
+  [class*="custom large screen only"]:not([class*="custom widescreen"]),
+  [class*="custom widescreen hidden"],
+  [class*="custom widescreen or lower hidden"] {
+    display: none !important;
+  }
+}

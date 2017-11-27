@@ -8,7 +8,7 @@ export default {
     'espadin': {
       'name': 'Espadin',
       'price': '$22.00 USD',
-      'promo': '<strong>Join, share and win one of the first 10 bottles</strong> of Mezcal Bard<span class="h">h</span>o! It\'s simple, if <strong>10 people sign up with your referal code</strong> you will be participating to win. Don\'t wait any longer, join, share and win.',
+      'promo': '<strong>Join, share and win one of the first 10 bottles</strong> of Mezcal Bard<span class="h">h</span>o! It\'s simple, if <strong>10 people sign up with your referral code</strong> you will be participating to win. Don\'t wait any longer, join, share and win.',
       'alcohol': '40% <small>ALC/VOL</small>',
       'version': 'v0.1',
       'volume': '750 ml',
@@ -26,7 +26,7 @@ export default {
       'reviews': {
         'title': 'Reviews',
         'top': {
-          'comment': 'With a slight soil note, evident to where it was harvested; definately artisanal',
+          'comment': 'With a slight soil note, evident to where it was harvested; definitely artisanal',
           'name': 'Pierre Antoine',
           'picture': 'https://firebasestorage.googleapis.com/v0/b/mezcal-bardho.appspot.com/o/reviewers%2Fpaa.jpg?alt=media&token=8b75fbb4-e1a0-45f5-abd9-8efe0ea6997e',
           'position': 'CEO | Radiowise'
@@ -42,7 +42,7 @@ export default {
   },
   'contact': {
     'title': 'Contact',
-    'blurb': 'Do you have any comments or questions? At Bard<span class="h">h</span>o we love to hear what you have to say. Always open to new ideas and oportunities.',
+    'blurb': 'Do you have any comments or questions? At Bard<span class="h">h</span>o we love to hear what you have to say. Always open to new ideas and opportunities.',
     'form': {
       'button': 'Send',
       'mail': 'Email',
@@ -60,7 +60,11 @@ export default {
       'home': 'Bard<span class="h">h</span>o',
       'stories': 'Stories',
       'products': 'Products',
-      'contact': 'Contact'
+      'contact': 'Contact',
+      'dropdown': {
+        'header': 'Change Language',
+        'select': 'Please Choose'
+      }
     },
     'mailList': {
       'title': 'Stay up to date',
@@ -75,7 +79,7 @@ export default {
     },
     'thanksMailingList': {
       'title': 'Congratulations!',
-      'blurb': 'You have succesfully registered in our database of distinguished members. You are very close to enjoying a bottle of Bard<span class="h">h</span>o',
+      'blurb': 'You have successfully registered in our database of distinguished members. You are very close to enjoying a bottle of Bard<span class="h">h</span>o',
       'steps': {
         'one': {
           'title': 'Join',
@@ -91,7 +95,7 @@ export default {
           'description': 'Enjoy the story of Bard<span class="h">h</span>o'
         }
       },
-      'share': 'Share your link with personalised code with as many pepole as you can to upper your chances of winning; Don\'t wait any longer, you are only a couple of links away.'
+      'share': 'Share your link with personalised code with as many people as you can to upper your chances of winning; Don\'t wait any longer, you are only a couple of links away.'
     },
     'loading': {
       'message': 'Loading…'

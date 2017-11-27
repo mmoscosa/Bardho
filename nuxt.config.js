@@ -18,10 +18,12 @@ module.exports = {
       { property: 'og:title', content: "Mezcal Bardho"},
       { property: 'og:image', content: "/preview.jpg"}
     ],
+
     link: [
       { rel: 'author', href: '/humans.txt' },
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.png' },
-      { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.css' }
+      { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.css' },
+      { rel: 'stylesheet', href: '/css/responsive.css' }
     ],
     script: []
   },
