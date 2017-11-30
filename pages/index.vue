@@ -8,7 +8,7 @@
         <p v-lang.index.blurb></p>
       </div>
       <div class="ui grid">
-        <div class="tablet mobile only sixteen wide column">
+        <div class="tablet mobile only fifteen wide column">
           <BottleSVG/>
         </div>
         <MailList/>
