@@ -4,7 +4,13 @@
       <div class="sixteen wide column">
         <h2 v-lang.products.espadin.master.title></h2>
         <div>
-          <img class="ui small centered circular image" src=" https://firebasestorage.googleapis.com/v0/b/mezcal-bardho.appspot.com/o/master.gif?alt=media&token=137a4787-8688-4aa6-9b2a-4752a346f059">
+          <div class="avatar-jose">
+            <amp-img class="ui small centered circular image" height="150" src="https://firebasestorage.googleapis.com/v0/b/mezcal-bardho.appspot.com/o/master.gif?alt=media&token=137a4787-8688-4aa6-9b2a-4752a346f059">
+              <noscript>
+                <img class="ui small centered circular image" src="https://firebasestorage.googleapis.com/v0/b/mezcal-bardho.appspot.com/o/master.gif?alt=media&token=137a4787-8688-4aa6-9b2a-4752a346f059"/>
+              </noscript>
+            </amp-img>
+          </div>
           <h3 v-lang.products.espadin.master.name></h3>
           <p v-lang.products.espadin.master.bio></p>
         </div>
@@ -16,7 +22,11 @@
         <h2 v-lang.products.espadin.reviews.title=""></h2>
 
           <!-- Top -->
-          <img class="ui tiny left floated circular image" src="https://firebasestorage.googleapis.com/v0/b/mezcal-bardho.appspot.com/o/reviewers%2Fpaa.jpg?alt=media&token=8b75fbb4-e1a0-45f5-abd9-8efe0ea6997e">
+          <amp-img class="ui tiny left floated circular image" height="80" src="https://firebasestorage.googleapis.com/v0/b/mezcal-bardho.appspot.com/o/reviewers%2Fpaa.jpg?alt=media&token=8b75fbb4-e1a0-45f5-abd9-8efe0ea6997e">
+            <noscript>
+              <img class="ui tiny left floated circular image" src="https://firebasestorage.googleapis.com/v0/b/mezcal-bardho.appspot.com/o/reviewers%2Fpaa.jpg?alt=media&token=8b75fbb4-e1a0-45f5-abd9-8efe0ea6997e"/>
+            </noscript>
+          </amp-img>
           <strong v-lang.products.espadin.reviews.top.name></strong><br>
           <small v-lang.products.espadin.reviews.top.position></small>
           <p><i class="quote left icon"></i> <span v-lang.products.espadin.reviews.top.comment></span></p>
@@ -38,3 +48,9 @@ export default {
   }
 }
 </script>
+
+<style lang="less">
+    .avatar-jose{
+      text-align: center;
+    }
+</style>
