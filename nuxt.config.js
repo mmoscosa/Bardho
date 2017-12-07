@@ -28,11 +28,12 @@ module.exports = {
     script: []
   },
   plugins:[
-    {src: '~/plugins/multilanguage', ssr: false },
-    {src: '~/plugins/instantsearch', ssr: false },
-    {src: '~/plugins/Viewer', ssr: false },
-    {src: '~/plugins/socialSharing', ssr: false },
-    {src: '~/plugins/firebase'}
+    {src: '~/plugins/multilanguage', ssr: false }, // Many languages
+    {src: '~/plugins/instantsearch', ssr: false }, // search feature (still WiP)
+    {src: '~/plugins/viewer', ssr: false }, // Fluxbox to see images biger
+    {src: '~/plugins/socialSharing', ssr: false }, // share on social media
+    {src: '~/plugins/vueCookie', ssr: false }, // share on social media
+    {src: '~/plugins/firebase'} // use firebase
   ],
   /*
   ** Customize the progress bar color
