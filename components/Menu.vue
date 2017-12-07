@@ -93,9 +93,9 @@ export default {
       locale = navigator.languages ? navigator.languages[0] : (navigator.language || navigator.userLanguage)
       locale = locale.toLowerCase()
       en = ['en', 'en-au', 'en-bz', 'en-ca', 'en-ie', 'en-jm', 'en-nz', 'en-ph', 'en-za', 'en-tt', 'en-gb', 'en-us', 'en-zw']
-      fr = ['fr', 'fr-be', 'fr-ca', 'fr-ch', 'fr-lu']
-      es = ['es', 'es-ar', 'es-gt', 'es-cr', 'es-pa', 'es-do', 'es-mx', 'es-ve', 'es-co', 'es-pe', 'es-ec', 'es-cl', 'es-uy', 'es-py', 'es-bo', 'es-sv', 'es-hn', 'es-ni', 'es-pr']
-      cn = ['cn', 'zh-cn', 'zh-sg', 'zh-cn', 'zh-hk', 'zh-mo']
+      fr = ['fr', 'fr-be', 'fr-ca', 'fr-fr', 'fr-lu', 'fr-mc', 'fr-ch']
+      es = ['es', 'es-ar', 'es-bo', 'es-cl', 'es-co', 'es-cr', 'es-do', 'es-ec', 'es-sv', 'es-gt', 'es-hn', 'es-mx', 'es-ni', 'es-pa', 'es-py', 'es-pe', 'es-pr', 'es-es', 'es-ve', 'es-uy']
+      cn = ['zh', 'cn', 'zh-cn', 'zh-sg', 'zh-hk', 'zh-mo', 'zh-tw']
       if (cookieLang) {
         this.language = cookieLang
       } else if (en.includes(locale)) {
