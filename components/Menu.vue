@@ -88,15 +88,23 @@ export default {
       this.section = this.$route.name
     },
     setLanguage: function () {
-      var locale = navigator.languages ? navigator.languages[0] : (navigator.language || navigator.userLanguage)
-      var fr = ['fr', 'fr-BE', 'fr-CA', 'fr-CH', 'fr-LU']
-      var es = ['es', 'es-AR', 'es-GT', 'es-CR', 'es-PA', 'es-DO', 'es-MX', 'es-VE', 'es-CO', 'es-PE', 'es-EC', 'es-CL', 'es-UY', 'es-PY', 'es-BO', 'es-SV', 'es-HN', 'es-NI', 'es-PR']
-      var cn = ['cn', 'zh-CN', 'zh-SG', 'zh-CN', 'zh-HK', 'zh-MO']
-      if (locale in fr) {
+      var locale, en, fr, es, cn, cookieLang
+      cookieLang = (this.$cookie.get('lang')) ? this.$cookie.get('lang') : false
+      locale = navigator.languages ? navigator.languages[0] : (navigator.language || navigator.userLanguage)
+      locale = locale.toLowerCase()
+      en = ['en', 'en-au', 'en-bz', 'en-ca', 'en-ie', 'en-jm', 'en-nz', 'en-ph', 'en-za', 'en-tt', 'en-gb', 'en-us', 'en-zw']
+      fr = ['fr', 'fr-be', 'fr-ca', 'fr-ch', 'fr-lu']
+      es = ['es', 'es-ar', 'es-gt', 'es-cr', 'es-pa', 'es-do', 'es-mx', 'es-ve', 'es-co', 'es-pe', 'es-ec', 'es-cl', 'es-uy', 'es-py', 'es-bo', 'es-sv', 'es-hn', 'es-ni', 'es-pr']
+      cn = ['cn', 'zh-cn', 'zh-sg', 'zh-cn', 'zh-hk', 'zh-mo']
+      if (cookieLang) {
+        this.language = cookieLang
+      } else if (en.includes(locale)) {
+        this.language = 'en'
+      } else if (fr.includes(locale)) {
         this.language = 'fr'
-      } else if (locale in es) {
+      } else if (es.includes(locale)) {
         this.language = 'es'
-      } else if (locale in cn) {
+      } else if (cn.includes(locale)) {
         this.language = 'cn'
       } else {
         this.language = 'en'
@@ -104,6 +112,7 @@ export default {
     },
     changeLanuage: function (lang) {
       this.language = lang
+      this.$cookie.set('lang', lang, { expires: '5Y' })
     }
   }
 }
