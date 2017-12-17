@@ -3,7 +3,7 @@
     <div class="ui row">
       <h1 v-lang.products.espadin.name></h1>
       <div>
-        <img class="ui medium left floated rounded image" src="~/assets/espadin.png">
+        <img class="ui medium left floated rounded image" src="//mmoscosa.com/2k3o7if">
         <h2  v-lang.products.espadin.description.title></h2>
         <p  v-lang.products.espadin.description.longDescription></p>
         <div class="ui divider"></div>
