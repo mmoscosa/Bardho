@@ -1,4 +1,4 @@
-<template lang="html">
+<template>
   <viewer class="ui four column grid" :images="photos">
     <div class="column" v-for="(photo, index) in photos">
       <img :src="photo.images[0].source" :key="photo.name" class="ui bordered rounded image" v-if="index < 4">
@@ -32,6 +32,3 @@ export default {
   }
 }
 </script>
-
-<style lang="css">
-</style>
