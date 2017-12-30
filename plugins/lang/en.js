@@ -103,6 +103,10 @@ export default {
     'soon': {
       'message': 'Coming Soon…'
     },
-    'sharesocial': {}
+    'sharesocial': {},
+    'disclaimers': {
+      'cookies': 'We Use Cookies 🍪 to ensure you get the best experience on our website <a class="ui mini inverted basic button" href="/disclaimers/cookies">More info</a>',
+      'age': 'You should be at least 18 years old 🔞 <small> - or the minimum age for your country</small> <a class="ui mini inverted basic button" href="/disclaimers/age">More info</a>'
+    }
   }
 }
