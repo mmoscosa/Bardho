@@ -103,6 +103,10 @@ export default {
     'soon': {
       'message': '快来了…'
     },
-    'sharesocial': {}
+    'sharesocial': {},
+    'disclaimers': {
+      'cookies': '我们使用 cookies 🍪 来确保您在我们的网站上获得最佳体验 <a class="ui mini inverted basic button" href="/disclaimers/cookies">更多信息</a>',
+      'age': '你应该至少有 18 🔞 <small> - 或者你的国家的最低年龄</small> <a class="ui mini inverted basic button" href="/disclaimers/age">更多信息</a>'
+    }
   }
 }

@@ -1,5 +1,15 @@
 <template>
-  <nav class="computer only column" id="navbar">
+  <nav id="navbar">
+    <div class="ui age nag">
+      <span class="title" v-lang.utils.disclaimers.age></span>
+      <i class="close icon"></i>
+    </div>
+    <div class="ui cookie nag top branded">
+      <span class="title" v-lang.utils.disclaimers.cookies></span>
+      <i class="close icon"></i>
+    </div>
+
+
     <div class="ui secondary pointing menu">
       <nuxt-link to="/" class="item" :class="{'active' : section == 'index'}" v-lang.utils.menu.home>
       </nuxt-link>
@@ -81,8 +91,21 @@ export default {
       window.jQuery = jQuery
       $.fn.transition = require('semantic-ui-transition')
       $.fn.dropdown = require('semantic-ui-dropdown')
+      $.fn.nag = require('semantic-ui-nag')
       /* UX */
       jQuery('.dropdown').dropdown({transition: 'drop'})
+      jQuery('.cookie.nag').nag({
+        storageMethod: 'localstorage',
+        // value to store in dismissed localstorage/cookie
+        key: 'accepts-cookies',
+        value: 'true'
+      })
+      jQuery('.age.nag').nag({
+        storageMethod: 'localstorage',
+        // value to store in dismissed localstorage/cookie
+        key: 'age-restriction',
+        value: 'true'
+      })
     },
     defineActive (newRoute, oldRoute) {
       this.section = this.$route.name
@@ -91,7 +114,7 @@ export default {
       var locale, en, fr, es, cn, cookieLang
       cookieLang = (this.$cookie.get('lang')) ? this.$cookie.get('lang') : false
       locale = navigator.languages ? navigator.languages[0] : (navigator.language || navigator.userLanguage)
-      locale = locale.toLowerCase()
+      locale = (locale) ? locale.toLowerCase() : 'en'
       en = ['en', 'en-au', 'en-bz', 'en-ca', 'en-ie', 'en-jm', 'en-nz', 'en-ph', 'en-za', 'en-tt', 'en-gb', 'en-us', 'en-zw']
       fr = ['fr', 'fr-be', 'fr-ca', 'fr-fr', 'fr-lu', 'fr-mc', 'fr-ch']
       es = ['es', 'es-ar', 'es-bo', 'es-cl', 'es-co', 'es-cr', 'es-do', 'es-ec', 'es-sv', 'es-gt', 'es-hn', 'es-mx', 'es-ni', 'es-pa', 'es-py', 'es-pe', 'es-pr', 'es-es', 'es-ve', 'es-uy']
@@ -118,23 +141,27 @@ export default {
 }
 </script>
 
-<style lang="less" scoped>
-@brandColor: #f57450;
-#navbar{
-  margin-bottom: 30px;
-  small{
-    padding-left: 5px;
-    font-size: 7pt;
+<style lang="less">
+  @brandColor: #f57450;
+  #navbar{
+    margin-bottom: 30px;
+    small{
+      padding-left: 5px;
+      font-size: 7pt;
+    }
+    i{
+      cursor: pointer !important;
+    }
   }
-  i{
-    cursor: pointer !important;
+  .ui.secondary.pointing.menu .active.item {
+    background-color: transparent;
+    box-shadow: none;
+    border-color: @brandColor;
+    font-weight: 700;
+    color: rgba(0,0,0,.95);
   }
-}
-.ui.secondary.pointing.menu .active.item {
-  background-color: transparent;
-  box-shadow: none;
-  border-color: @brandColor;
-  font-weight: 700;
-  color: rgba(0,0,0,.95);
-}
-</style>
+
+  .ui.nag.branded {
+    background-color: @brandColor;
+  }
+  </style>
