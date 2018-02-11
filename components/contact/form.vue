@@ -58,7 +58,7 @@ export default {
           },
           'to': {
             'name': 'Mezcal Bardho',
-            'email': 'contacto@bardho.com'
+            'email': 'mezcal@bardho.com'
           },
           'subject': 'Forma de Contacto',
           'message': this.cForm.message,
