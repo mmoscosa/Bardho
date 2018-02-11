@@ -105,8 +105,12 @@ export default {
     },
     'sharesocial': {},
     'disclaimers': {
-      'cookies': 'We Use Cookies 🍪 to ensure you get the best experience on our website <a class="ui mini inverted basic button" href="/disclaimers/cookies">More info</a>',
-      'age': 'You should be at least 18 years old 🔞 <small> - or the minimum age for your country</small> <a class="ui mini inverted basic button" href="/disclaimers/age">More info</a>'
+      'cookies': 'We Use Cookies 🍪 to ensure you get the best experience on our website <a class="ui mini inverted basic button" href="/disclaimers?section=cookies">More info</a>',
+      'age': 'You should be at least 18 years old 🔞 <small> - or the minimum age for your country</small> <a class="ui mini inverted basic button" href="/disclaimers?section=privacy">More info - Privacy Disclaimer</a>',
+      'menu': {
+        'cookies': 'Cookies',
+        'privacy': 'Privacy Policy'
+      }
     }
   }
 }
