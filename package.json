@@ -1,8 +1,8 @@
 {
-  "name": "my-project",
+  "name": "bardho",
   "version": "1.0.0",
-  "description": "Nuxt.js project",
-  "author": "",
+  "description": "Mezcal Bardho Project",
+  "author": "Martin Moscosa <mmoscosa@bardho.com>",
   "private": true,
   "scripts": {
     "dev": "nuxt",
