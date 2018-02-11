@@ -3,7 +3,9 @@ export default {
     'blurb': 'Ya sea que estés cerrando un negocio, comenzando tu empresa, puede ser que te promovieron, no se hable de un desamor o un compromiso; muy al estilo mexicano el celebrar las victorias así como las derrotas, inequivocadamente el acompañante perfecto; aquel testigo es Mezcal Bard<span class="h">h</span>o. Para personas que siempre están buscando dar más, arreglárselas con creatividad, siempre manteniendo un estilo muy propio, personas que nunca se dan por vencidas.',
     'slogan': 'Compartiendo historias'
   },
-  'about': {},
+  'about': {
+    
+  },
   'products': {
     'espadin': {
       'name': 'Espadín',
