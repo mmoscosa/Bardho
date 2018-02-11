@@ -106,7 +106,11 @@ export default {
     'sharesocial': {},
     'disclaimers': {
       'cookies': 'Nous utilisons des cookies 🍪 pour vous garantir la meilleure expérience sur notre site <a class="ui mini inverted basic button" href="/disclaimers/cookies">Plus d\'informations</a>',
-      'age': 'Vous devriez avoir au moins 18 ans 🔞 <small> - ou l\'âge minimum pour votre pays</small> <a class="ui mini inverted basic button" href="/disclaimers/age">Plus d\'informations</a>'
+      'age': 'Vous devriez avoir au moins 18 ans 🔞 <small> - ou l\'âge minimum pour votre pays</small> <a class="ui mini inverted basic button" href="/disclaimers/age">Plus d\'informations</a>',
+      'menu': {
+        'cookies': 'Cookies',
+        'privacy': 'Avis de confidentialité'
+      }
     }
   }
 }
